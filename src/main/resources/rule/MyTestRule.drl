@@ -1,0 +1,27 @@
+//created on: 2015-3-26
+package com.lich0079
+
+//list any import classes here.
+import java.util.Date;
+import com.lich0079.custom.model.*;
+import java.util.*;
+
+
+//declare any global variables here
+
+
+
+
+rule "MyTestRule"
+no-loop
+salience 1
+ruleflow-group "MyTestRule"
+    when
+        item : CheckItem(isNeedData()==true,hasData()==false)
+    then
+        System.out.println("CheckItem: "+item.getItem());
+        item.setNote("No available data! "+item.getNote());
+        item.setAlert(true);
+        update(item);
+        System.out.println( "MyTestRule Rule Fired");
+end

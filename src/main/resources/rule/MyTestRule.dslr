@@ -1,0 +1,25 @@
+//created on: 2015-3-26
+package com.lich0079
+
+//list any import classes here.
+import java.util.Date;
+import com.lich0079.custom.model.*;
+import java.util.*;
+
+expander MyTestRule.dsl
+
+
+//declare any global variables here
+
+rule "MyTestRuleDSLR"
+no-loop
+salience 1
+ruleflow-group "MyTestRuleDSLR"
+    when
+        There is a checkitem
+        -The checkitem is need data
+        -The checkitem has no data
+    then
+        Add "No available data! " to the item
+        Print checkitem
+end
