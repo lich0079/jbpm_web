@@ -3,7 +3,9 @@ jbpm spring tomcat integrate demo jbpm6.1
 
 This project demo how to integrate jbpm6.1 tomcat spring into one web application
 
-origin come from project https://github.com/paulrajjey/jbpm6-spring-tomcat, but simple than that.
+origin come from project https://github.com/paulrajjey/jbpm6-spring-tomcat, but simple than that
+
+also demo how to integrate human task with your own role system using CustomUserGroupCallback
 
 
 Use case:
